@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MessageComponent } from './message/message.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/message', pathMatch: 'full' },
+  { component: MessageComponent, path: 'message' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
